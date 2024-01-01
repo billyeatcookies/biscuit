@@ -1,0 +1,13 @@
+gitpython
+filetype
+tkextrafont
+watchdog
+pygments
+Pillow
+toml
+hintedtext
+sv-ttk
+requests
+pyperclip
+sansio_lsp_client
+chardet 
