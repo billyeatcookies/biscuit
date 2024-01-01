@@ -18,13 +18,12 @@ from .diffeditor import DiffEditor
 from .editor import BaseEditor
 from .image import ImageViewer
 from .languages import Languages
-from .markdown import MDEditor
 from .misc import Welcome
 from .texteditor import TextEditor
 
 
 def get_editor(base, path: str=None, exists: bool=True, path2: str=None, 
-               diff: bool=False, language: str=None) -> TextEditor | DiffEditor | MDEditor | ImageViewer:
+               diff: bool=False, language: str=None) -> TextEditor | DiffEditor  | ImageViewer:
     "picks the right editor for the given values"
     if diff:
         return DiffEditor(base, path, exists, language=language)
@@ -32,8 +31,6 @@ def get_editor(base, path: str=None, exists: bool=True, path2: str=None,
     if path and os.path.isfile(path):
         if FileType.is_image(path):
             return ImageViewer(base, path)
-        if any(path.endswith(i) for i in ('.md', '.markdown', '.mdown', '.rst', '.mkd')):
-            return MDEditor(base, path, exists=exists)
 
         return TextEditor(base, path, exists, language=language)
 

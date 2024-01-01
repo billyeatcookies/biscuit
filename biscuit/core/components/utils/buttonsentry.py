@@ -1,9 +1,9 @@
 import tkinter as tk
 
+from hintedtext import HintedEntry
+
 from .frame import Frame
 from .iconbutton import IconButton
-
-from hintedtext import HintedEntry
 
 
 class ButtonsEntry(Frame):
@@ -19,7 +19,7 @@ class ButtonsEntry(Frame):
         self.column = 1
         self.add_buttons(buttons)
 
-    def add_button(self, icon, event=lambda _: None, icon2):
+    def add_button(self, icon, event=lambda _: None, icon2=None):
         b=IconButton(self, icon, event, icon2)
         b.grid(row=0, column=self.column, sticky='')
         b.config(**self.base.theme.utils.buttonsentry.button)

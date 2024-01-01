@@ -4,9 +4,9 @@
 name: "Nuitka builds (windows)"
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "nuitka-test" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main", "nuitka-test" ]
 
 jobs:
   build:
@@ -35,8 +35,3 @@ jobs:
         with:
             name: "biscuit-nightly"
             path: "biscuit.dist"
-      
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v3
-        with:
-            name: "/"
