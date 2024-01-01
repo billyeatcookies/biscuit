@@ -60,15 +60,8 @@ class Logs(PanelView):
         self.text.tag_config('error', foreground=self.base.theme.views.panel.logs.error, font=fontbold)
 
     def write(self, *args) -> None:
-        self.text.config(state=tk.NORMAL)
-        for i in args:
-            if isinstance(i, tuple):
-                self.text.insert(tk.END, i[0], i[1])
-            else:
-                self.text.insert(tk.END, i)
-        self.text.config(state=tk.DISABLED)
-        self.text.see(tk.END)
-    
+        print(args)
+        
     def newline(self) -> None:
         self.write('\n')
 
