@@ -28,7 +28,7 @@ jobs:
           pip install Nuitka
 
       - name: nuitka build
-        run: echo Yes| python -m nuitka --standalone --enable-plugin=tk-inter biscuit
+        run: echo Yes| python -m nuitka --include-module pygments --follow-imports --standalone --enable-plugin=tk-inter biscuit
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v3

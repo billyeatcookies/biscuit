@@ -26,6 +26,7 @@ class LanguageServerManager:
     
     def tab_opened(self, tab: Text) -> None:
         self.latest = self.request_client_instance(tab)
+
         if self.latest:
             self.latest.open_tab(tab)
         return self.latest is not None
@@ -93,3 +94,4 @@ class LanguageServerManager:
             instance.io.p.kill()          
 
         del instance
+
