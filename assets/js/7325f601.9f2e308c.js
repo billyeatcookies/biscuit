@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkbiscuit=self.webpackChunkbiscuit||[]).push([[6180],{3416:s=>{s.exports=JSON.parse('{"label":"facebook","permalink":"/biscuit/blog/tags/facebook","allTagsPath":"/biscuit/blog/tags","count":1,"unlisted":false}')}}]);
