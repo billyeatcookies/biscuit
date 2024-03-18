@@ -5,7 +5,7 @@
 <meta name="generator" content="Docusaurus v3.1.0">
 <title data-rh="true">intro | Biscuit Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://billyeatcookies.github.io/biscuit/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://billyeatcookies.github.io/biscuit/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://billyeatcookies.github.io/biscuit/docs/intro"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="intro | Biscuit Docs"><meta data-rh="true" name="description" content="Welcome to the developer&#x27;s documentation for Biscuit. This is a work in progress, so please be patient. If you have any questions, feel free to join the tkinter discord community and ask in the #biscuit channel."><meta data-rh="true" property="og:description" content="Welcome to the developer&#x27;s documentation for Biscuit. This is a work in progress, so please be patient. If you have any questions, feel free to join the tkinter discord community and ask in the #biscuit channel."><link data-rh="true" rel="icon" href="/biscuit/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://billyeatcookies.github.io/biscuit/docs/intro"><link data-rh="true" rel="alternate" href="https://billyeatcookies.github.io/biscuit/docs/intro" hreflang="en"><link data-rh="true" rel="alternate" href="https://billyeatcookies.github.io/biscuit/docs/intro" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/biscuit/blog/rss.xml" title="Biscuit Docs RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/biscuit/blog/atom.xml" title="Biscuit Docs Atom Feed"><link rel="stylesheet" href="/biscuit/assets/css/styles.44830dcd.css">
-<script src="/biscuit/assets/js/runtime~main.01fa5ef8.js" defer="defer"></script>
+<script src="/biscuit/assets/js/runtime~main.ebfb814c.js" defer="defer"></script>
 <script src="/biscuit/assets/js/main.c485de53.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -13,10 +13,20 @@
 <h2 id="what-is-biscuit">What is Biscuit?</h2>
 <p>Biscuit is a lightweight, easy to use code editor for any language. We wrote it in python, using only tkinter for GUI. It&#x27;s a great alternative to [insert funny thing here]!</p>
 <h2 id="setting-up-environment">Setting up Environment</h2>
+<p>Python 3.10 or above is required for building Biscuit.</p>
 <p><a href="https://docs.github.com/en/get-started/quickstart/fork-a-repo"><strong>Fork</strong></a> the Biscuit repository and clone locally.</p>
 <pre><code class="language-bash">git clone http://github.com/billyeatcookies/biscuit
 </code></pre>
-<p>Run <code>pip install -r requirements.txt</code> or <code>poetry install</code>, your preference. Try to run biscuit once with <code>python -m biscuit</code> and make sure everything looks good.</p>
+<p>Run <code>pip install -r requirements.txt</code> or <code>poetry install</code>, your preference. Try to launch biscuit once with <code>python -m biscuit</code> and make sure everything looks good.</p>
+<blockquote>
+<p>[!IMPORTANT]
+Linux distros require some prerequisites to be installed prior to the pip installation</p>
+<pre><code class="language-bash"> sudo apt install python3-dev tcl-dev tk-dev \
+   fontconfig libfontconfig1 libfontconfig1-dev \
+   cmake cmake-data extra-cmake-modules build-essential
+ python -m pip install scikit-build
+</code></pre>
+</blockquote>
 <h3 id="what-youll-need">What you&#x27;ll need</h3>
 <ul>
 <li><a href="https://python.org/en/download/">Python</a> 3.10 or above</li>
